@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body{
+    background-color: #485876;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Segoe WP, Arial;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    /* 整个滚动条背景 */
+        ::-webkit-scrollbar {
+            // width: 25px;
+            margin: 5px;
+            background-color: transparent;
+        }
+    
+        /* 滚动条上的按钮 (上下箭头). */
+        ::-webkit-scrollbar-button {
+           display: none;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            // width: 10px;
+            /* 上下两头给个圆角 */
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 10px;
+            /* 还可以给它加个阴影 */
+            // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        }
+    
+        /* 滚动条轨道 */
+        // ::-webkit-scrollbar-track {
+        //     border-radius: 20px;
+        //     background-color: transparent;
+        // }
+    
+        /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
+        ::-webkit-scrollbar-corner {
+            background: rgba(255, 255, 255, .1);
+            border-radius: 50% 50%;
+        }
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .content {
+        
+        flex-wrap: wrap;
+    }
+    .searchbar{
+        border:0;
+        
+    }
+    .mobile{
+        display: none;
+    }
+    .word{
+        span{      
+            &:nth-child(n+5){
+                display: none;
+            }
+        }
+    }
+}
+
+
+// 顶部导航
+.top-nav{
+    height: 8vh;
+    .navContainer{
+        position: fixed;     
+        z-index: 100;     
+        width: 100%;
+        .top-container{
+            background-color: #54617A;
+            display: flex;
+            .search-bar{      
+                width: 100vw;
+                padding: .4em .4em;
+                border-right: 1px solid #768195;
+                display: flex;
+                justify-content: center;
+                input{
+                    caret-color: #fff; // 设置光标的颜色
+                    padding-left: 2em;
+                    background-color: #68748A;
+                    border:1px solid transparent;
+                    border-right: 0;
+                    height: 2em;
+                    width: 18em;
+                    border-radius:25px 0px 0 25px;
+                    font-size: 16px;
+                    color: #fff;
+                    outline: none;
+                    &::placeholder{
+                        padding-left: .5em;
+                        font-size: 14px;
+                        color: #D7DAE0;
+                    }
+                }
+                button {
+                    // display: inline-block;
+                    height: 34px;
+                    // width: 3em;
+                    cursor: pointer;
+                    // line-height: 18px;
+                    // border: 1px solid transparent;
+                    border: 0;
+                    border-radius:0 25px 25px 0;
+                    background-color: #68748A;
+                }
+            }
+            .city-list{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                list-style: none;
+                .items{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding:0 3em 0 3em;
+                    line-height: 16px;
+                    cursor: pointer;
+                    height: 48px;
+                    border-right: 1px solid #768195;   
+                    &:hover{
+                        background-color: #4D5970;
+                    }
+                    span{     
+                        font-size: 14px;  
+                        // display: block;
+                        // float: left;
+                        height: 14px;
+                        width: 28px;
+                        // align-items: center;
+                        // padding: 2px;          
+                        // text-align: center;
+                        // position: relative;
+                    }
+                    img{
+                        padding: 0 .2em 0 2em;
+                        height: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 头部内容区
+.header{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    .h-container{
+        margin: 0.5em 0 0 4.2em;
+        height: 2em;
+        display: flex;
+        // flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        // padding-left: 3.2em;
+        flex-wrap: wrap;
+        align-content: center;
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            padding-left: 1em;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        button {
+            width: 26px;
+            height: 26px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-sizing: border-box;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            padding: 0px;
+            margin: 0;
+            position: relative;
+            margin-left: 16px;
+                // height: 2em;
+                // width: 2em;
+                // cursor: pointer;
+                // border: .1px solid white;
+                // border-radius: 30px;
+                // background-color: #68748A;
+            }
+    }
+    .cardContainer{
+        display: flex;
+        justify-content: space-evenly;
+        .content{
+            display: flex;
+            justify-content: space-between;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 89vw;
+            border-radius: 10px;
+            margin: .8em 0;
+            .content-left{
+                background-image: url("https://assets.msn.cn/weathermapdata/1/static/background/v2.0/compactads3/Cloudy 2.png");
+                background-size: cover;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                margin: .8em 0;
+                // margin-right: 6vw;
+                width: 480px;
+                height: 250px;
+                .now{
+                    // padding-left: .5em;
+                    b{
+                        font-size: .8em;
+                    }
+                    p{
+                        font-size: .4em;
+                        color: rgba(255, 255, 255, .6);
+                    }
+                }
+                .weather{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: 1em;
+                    p{
+                        font-size: 46px;
+                        margin-left: 0.5em;
+                    }
+                    span{
+                        margin-top: -14px;
+                        font-size: 26px;
+                        margin-right: 0.7em;
+                    }
+                    .body-temp{
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        line-height: 16px;
+                        opacity: 0.8;
+                        margin:.5em 0 0 0;
+                    }
+                }
+                .conclude{
+                    font-size: .9em;
+                    padding: .5em;
+                }
+                .info{
+                    // display: flex;
+                    // flex-direction: column;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 6px 1px 1px 1px;
+                    .word{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        // position: relative;
+                        overflow: hidden;
+                        p{
+                            font-size: 15px;
+                        }
+                        span{
+                            margin-top: 1em;
+                            list-style: none;
+                            a{
+                                text-decoration: none;
+                                font-size: .5em;
+                                text-overflow: hidden;
+                                color: rgba(255, 255, 255, .6);
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+             }
+            }
+            .content-right {
+                background-image: url("./src/1.png");
+                background-size: cover;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                margin: .8em 0;
+                width: 480px;
+                height: 250px;
+                .minibtn {
+                    display: flex;
+                    flex-direction: column;
+                    width: 2em;
+                    padding: 3px;
+                    backdrop-filter: blur(3px);
+                    background-color: rgba(0, 0, 0, .5);
+                    border-radius: 6px;
+                    box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+
+                    button {
+                        height: 2.5em;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none;
+
+                        &:hover {
+                            background-color: #FFD02C;
+                            border-radius: 5px;
+
+                            svg {
+                                fill: #485876;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      
+    }
+
+}
+
+
+// 中心内容区
+.center{
+    .WeatherForecast{
+        // 顶部标题
+        .newsContentTitle{
+            // margin: 0 4.2em;
+            // height: 2em;
+            padding: 0 5.5vw;
+            display: flex;
+            // justify-content: center;
+            width: 88.5vw;
+            // align-items: center;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            // align-content: center;
+            .Title{
+                a{
+                    font-size: 14px;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+        // 预报信息
+        .container{
+            display: flex;
+            justify-content: center;
+            //预报信息预览
+            .newsContent{
+                display: flex;
+                // justify-content: ;
+                overflow-x: hidden; 
+                scroll-behavior: smooth;
+                width: 89vw;
+                border-radius: 10px;
+                margin: .8em 0;
+                // padding: 0 .8em;
+                // height: 27vh;
+                // background-color: #322b12;
+                .page{
+                    overflow: hidden;
+                    width: 160px;
+                    height: 130px;
+                    flex-shrink: 0;
+                    margin-right:.8em;
+                    background-color: rgba(255, 255, 255, .1);
+                    border-radius: 10px;
+                    &:nth-child(1){
+                        width: 300px;
+                        background-color: rgba(255, 255, 255, .13);
+                        // &::after{
+                        //     display: block;
+                        //     content: '';
+                        //     border-width: 8px 6px;
+                        //     border-style: solid;
+                        //     border-color: rgba(255, 255, 255, 0.13) transparent transparent transparent;
+                        //     position: absolute;
+                        //     left: 50%;
+                        //     transform: translateX(-340px) translateY(155px);
+                        //     width: 0;
+                        // }
+                    }
+                    .pageContent{
+                        overflow: hidden;
+                        // background-color: #ef2132;
+                        height: 18vh;
+                        // margin: 1em;
+                        padding: 1.4em;
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            font-weight: bold;
+                            // font-size: 14px;
+                            // background-color: #FFD02C;
+                        }
+                        .infoContent{
+                            display: flex;
+                            justify-content: space-between;
+                            // background-color: #485876;
+                            height: 15vh;
+                            .info1{
+                                // background-color: #526352;
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    height: 10vh;
+                                }
+                                p{
+                                    
+                                }
+                            }
+                            .info2{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-end;
+                                // background-color: #726752;
+                                .upper{
+
+                                }
+                                .down{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+        //当日详细天气
+        .todayContainer{
+            display: flex;
+            justify-content: center;
+            .weatherDetail {
+                display: flex;
+                overflow-x: hidden;
+                width: 89vw;
+                //信息指示条
+                .detailInfor {
+                    width: 100%;
+                    // height: 48vh;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    background-color: rgba(255, 255, 255, .1);
+                    .tipBar{
+                        display: flex;
+                        align-items: center;
+                        // height: 7vh;
+                        border-bottom: 1px solid rgba(255, 255, 255, .1);
+                        .text{
+                            margin:  0 0 0 40px;
+                            padding: 10px 0;
+                            // background-color: #FFD02C;
+                            &:nth-child(1){
+                                border-bottom: 2px solid #fff;
+                            }
+                            a{
+                                text-decoration: none;
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    // 每小时详细报道
+                    .hourlyToggleContent{
+                        svg{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+       }
+    }
+}
+
+
+// 底部内容区
+.footer{
+    .moreInformation {     
+        // 底部标题
+        .moreTitle {
+            margin: 0 4.2em;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+    }
+    // 更多信息
+    .container {
+        display: flex;
+        justify-content: center;
+        //更多信息预览
+        .newsContent {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            width: 89vw;
+            border-radius: 10px;
+            margin: .8em 0;          
+            .page {
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                background-size: contain;
+                overflow: hidden;
+                width: 300px;
+                height: 200px;
+                flex-shrink: 0;
+                margin-right: .8em;
+                background-color: rgba(255, 255, 255, .1);
+                border-radius: 10px;
+                
+            }
+        }
+
+    }
+}
+
+
+
+
+
+

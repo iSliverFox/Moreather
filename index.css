@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+body {
+  background-color: #485876;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Segoe WP, Arial;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* 整个滚动条背景 */
+  /* 滚动条上的按钮 (上下箭头). */
+  /* 滚动条轨道 */
+  /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
+}
+body ::-webkit-scrollbar {
+  margin: 5px;
+  background-color: transparent;
+}
+body ::-webkit-scrollbar-button {
+  display: none;
+}
+body ::-webkit-scrollbar-thumb {
+  /* 上下两头给个圆角 */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  /* 还可以给它加个阴影 */
+}
+body ::-webkit-scrollbar-corner {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50% 50%;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .content {
+    flex-wrap: wrap;
+  }
+  .searchbar {
+    border: 0;
+  }
+  .mobile {
+    display: none;
+  }
+  .word span:nth-child(n+5) {
+    display: none;
+  }
+}
+.top-nav {
+  height: 8vh;
+}
+.top-nav .navContainer {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+.top-nav .navContainer .top-container {
+  background-color: #54617A;
+  display: flex;
+}
+.top-nav .navContainer .top-container .search-bar {
+  width: 100vw;
+  padding: 0.4em 0.4em;
+  border-right: 1px solid #768195;
+  display: flex;
+  justify-content: center;
+}
+.top-nav .navContainer .top-container .search-bar input {
+  caret-color: #fff;
+  padding-left: 2em;
+  background-color: #68748A;
+  border: 1px solid transparent;
+  border-right: 0;
+  height: 2em;
+  width: 18em;
+  border-radius: 25px 0px 0 25px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+.top-nav .navContainer .top-container .search-bar input::placeholder {
+  padding-left: 0.5em;
+  font-size: 14px;
+  color: #D7DAE0;
+}
+.top-nav .navContainer .top-container .search-bar button {
+  height: 34px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0 25px 25px 0;
+  background-color: #68748A;
+}
+.top-nav .navContainer .top-container .city-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+.top-nav .navContainer .top-container .city-list .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 3em 0 3em;
+  line-height: 16px;
+  cursor: pointer;
+  height: 48px;
+  border-right: 1px solid #768195;
+}
+.top-nav .navContainer .top-container .city-list .items:hover {
+  background-color: #4D5970;
+}
+.top-nav .navContainer .top-container .city-list .items span {
+  font-size: 14px;
+  height: 14px;
+  width: 28px;
+}
+.top-nav .navContainer .top-container .city-list .items img {
+  padding: 0 0.2em 0 2em;
+  height: 1.3em;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header .h-container {
+  margin: 0.5em 0 0 4.2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.header .h-container a {
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 1em;
+}
+.header .h-container a:hover {
+  text-decoration: underline;
+}
+.header .h-container button {
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0;
+  position: relative;
+  margin-left: 16px;
+}
+.header .cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .cardContainer .content {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 89vw;
+  border-radius: 10px;
+  margin: 0.8em 0;
+}
+.header .cardContainer .content .content-left {
+  background-image: url("https://assets.msn.cn/weathermapdata/1/static/background/v2.0/compactads3/Cloudy 2.png");
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0.8em 0;
+  width: 480px;
+  height: 250px;
+}
+.header .cardContainer .content .content-left .now b {
+  font-size: 0.8em;
+}
+.header .cardContainer .content .content-left .now p {
+  font-size: 0.4em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.header .cardContainer .content .content-left .weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1em;
+}
+.header .cardContainer .content .content-left .weather p {
+  font-size: 46px;
+  margin-left: 0.5em;
+}
+.header .cardContainer .content .content-left .weather span {
+  margin-top: -14px;
+  font-size: 26px;
+  margin-right: 0.7em;
+}
+.header .cardContainer .content .content-left .weather .body-temp {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  opacity: 0.8;
+  margin: 0.5em 0 0 0;
+}
+.header .cardContainer .content .content-left .conclude {
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+.header .cardContainer .content .content-left .info {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 1px 1px 1px;
+}
+.header .cardContainer .content .content-left .info .word {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.header .cardContainer .content .content-left .info .word p {
+  font-size: 15px;
+}
+.header .cardContainer .content .content-left .info .word span {
+  margin-top: 1em;
+  list-style: none;
+}
+.header .cardContainer .content .content-left .info .word span a {
+  text-decoration: none;
+  font-size: 0.5em;
+  text-overflow: hidden;
+  color: rgba(255, 255, 255, 0.6);
+}
+.header .cardContainer .content .content-left .info .word span a:hover {
+  text-decoration: underline;
+}
+.header .cardContainer .content .content-right {
+  background-image: url("src/1.png");
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0.8em 0;
+  width: 480px;
+  height: 250px;
+}
+.header .cardContainer .content .content-right .minibtn {
+  display: flex;
+  flex-direction: column;
+  width: 2em;
+  padding: 3px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.header .cardContainer .content .content-right .minibtn button {
+  height: 2.5em;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.header .cardContainer .content .content-right .minibtn button:hover {
+  background-color: #FFD02C;
+  border-radius: 5px;
+}
+.header .cardContainer .content .content-right .minibtn button:hover svg {
+  fill: #485876;
+}
+.center .WeatherForecast .newsContentTitle {
+  padding: 0 5.5vw;
+  display: flex;
+  width: 88.5vw;
+  justify-content: space-between;
+}
+.center .WeatherForecast .newsContentTitle .Title a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.center .WeatherForecast .container {
+  display: flex;
+  justify-content: center;
+}
+.center .WeatherForecast .container .newsContent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 89vw;
+  border-radius: 10px;
+  margin: 0.8em 0;
+}
+.center .WeatherForecast .container .newsContent .page {
+  overflow: hidden;
+  width: 160px;
+  height: 130px;
+  flex-shrink: 0;
+  margin-right: 0.8em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.center .WeatherForecast .container .newsContent .page:nth-child(1) {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+.center .WeatherForecast .container .newsContent .page .pageContent {
+  overflow: hidden;
+  height: 18vh;
+  padding: 1.4em;
+  display: flex;
+  flex-direction: column;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent span {
+  font-weight: bold;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 {
+  display: flex;
+  align-items: center;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 img {
+  height: 10vh;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.center .WeatherForecast .todayContainer {
+  display: flex;
+  justify-content: center;
+}
+.center .WeatherForecast .todayContainer .weatherDetail {
+  display: flex;
+  overflow-x: hidden;
+  width: 89vw;
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor .tipBar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor .tipBar .text {
+  margin: 0 0 0 40px;
+  padding: 10px 0;
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor .tipBar .text:nth-child(1) {
+  border-bottom: 2px solid #fff;
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor .tipBar .text a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+.center .WeatherForecast .todayContainer .weatherDetail .detailInfor .hourlyToggleContent svg {
+  fill: #fff;
+}
+.footer .moreInformation .moreTitle {
+  margin: 0 4.2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+}
+.footer .container .newsContent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 89vw;
+  border-radius: 10px;
+  margin: 0.8em 0;
+}
+.footer .container .newsContent .page {
+  background-size: contain;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  margin-right: 0.8em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.footer .container .newsContent .page img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
