@@ -293,6 +293,7 @@ body::-webkit-scrollbar {
                 margin: .8em 0;
                 width: 480px;
                 height: 250px;
+                cursor: pointer;
                 .minibtn {
                     display: flex;
                     flex-direction: column;
@@ -380,6 +381,7 @@ body::-webkit-scrollbar {
                     margin-right:.8em;
                     background-color: rgba(255, 255, 255, .1);
                     border-radius: 10px;
+                    cursor: pointer;
                     &:nth-child(1){
                         width: 300px;
                         background-color: rgba(255, 255, 255, .13);
@@ -530,11 +532,11 @@ body::-webkit-scrollbar {
                 &:nth-child(5){background-image: url(./src/wind.gif);}
                 &:nth-child(6){background-image: url(./src/air-small.gif);}
                 &:nth-child(7){background-image: url(./src/precipitation.gif);}          
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                }
+                // img{
+                //     height: 100%;
+                //     width: 100%;
+                //     object-fit: cover;
+                // }
                 background-size: 300px 180px;
                 background-repeat: no-repeat;
                 overflow: hidden;
@@ -544,7 +546,34 @@ body::-webkit-scrollbar {
                 margin-right: .8em;
                 background-color: rgba(255, 255, 255, .1);
                 border-radius: 10px;
-                
+                cursor: pointer;
+                // padding: 1em;
+                .titleContent{
+                    padding: 1.5em;
+                    padding-top: 5em;
+                    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.28) 63.71%, rgba(0, 0, 0, 0) 100%);
+                    // margin-top: 90px;
+                    // background-color: #FFD02C;
+                    // height: 2em;
+                    .p1{
+                        background-color: red;
+                        width: 38px;
+                        padding: 2px;
+                        margin-bottom: 2px;
+                        text-align: center;
+                        border-radius: 5px;
+                        font-weight: bold;
+                    }
+                    .p2{
+                        font-size: 1.8em;
+                        font-weight: bold;
+                    }
+                    .p3{
+                        margin-top: 2px;
+                        font-size: 14px;
+                    }
+                }
+
             }
         }
 
