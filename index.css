@@ -11,27 +11,6 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
-  /* 整个滚动条背景 */
-  /* 滚动条上的按钮 (上下箭头). */
-  /* 滚动条轨道 */
-  /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
-}
-body ::-webkit-scrollbar {
-  margin: 5px;
-  background-color: transparent;
-}
-body ::-webkit-scrollbar-button {
-  display: none;
-}
-body ::-webkit-scrollbar-thumb {
-  /* 上下两头给个圆角 */
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  /* 还可以给它加个阴影 */
-}
-body ::-webkit-scrollbar-corner {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50% 50%;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -297,7 +276,7 @@ body::-webkit-scrollbar {
 }
 .center .WeatherForecast .container .newsContent {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   width: 89vw;
   border-radius: 10px;
@@ -406,7 +385,7 @@ body::-webkit-scrollbar {
 }
 .footer .container .newsContent {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   width: 89vw;
   border-radius: 10px;

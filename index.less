@@ -13,38 +13,38 @@ body{
     scrollbar-width: none;
     /* Firefox */
 
-    /* 整个滚动条背景 */
-        ::-webkit-scrollbar {
-            // width: 25px;
-            margin: 5px;
-            background-color: transparent;
-        }
+    // /* 整个滚动条背景 */
+    //     ::-webkit-scrollbar {
+    //         // width: 25px;
+    //         margin: 5px;
+    //         background-color: transparent;
+    //     }
     
-        /* 滚动条上的按钮 (上下箭头). */
-        ::-webkit-scrollbar-button {
-           display: none;
-        }
+    //     /* 滚动条上的按钮 (上下箭头). */
+    //     ::-webkit-scrollbar-button {
+    //        display: none;
+    //     }
     
-        ::-webkit-scrollbar-thumb {
-            // width: 10px;
-            /* 上下两头给个圆角 */
-            background-color: rgba(255, 255, 255, .1);
-            border-radius: 10px;
-            /* 还可以给它加个阴影 */
-            // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        }
+    //     ::-webkit-scrollbar-thumb {
+    //         // width: 10px;
+    //         /* 上下两头给个圆角 */
+    //         background-color: rgba(255, 255, 255, .1);
+    //         border-radius: 10px;
+    //         /* 还可以给它加个阴影 */
+    //         // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    //     }
     
-        /* 滚动条轨道 */
-        // ::-webkit-scrollbar-track {
-        //     border-radius: 20px;
-        //     background-color: transparent;
-        // }
+    //     /* 滚动条轨道 */
+    //     // ::-webkit-scrollbar-track {
+    //     //     border-radius: 20px;
+    //     //     background-color: transparent;
+    //     // }
     
-        /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
-        ::-webkit-scrollbar-corner {
-            background: rgba(255, 255, 255, .1);
-            border-radius: 50% 50%;
-        }
+    //     /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
+    //     ::-webkit-scrollbar-corner {
+    //         background: rgba(255, 255, 255, .1);
+    //         border-radius: 50% 50%;
+    //     }
 
 }
 
@@ -373,7 +373,7 @@ body::-webkit-scrollbar {
             .newsContent{
                 display: flex;
                 // justify-content: ;
-                overflow-x: hidden; 
+                overflow-x: scroll; 
                 scroll-behavior: smooth;
                 width: 89vw;
                 border-radius: 10px;
@@ -525,7 +525,7 @@ body::-webkit-scrollbar {
         //更多信息预览
         .newsContent {
             display: flex;
-            overflow-x: hidden;
+            overflow-x: scroll;
             scroll-behavior: smooth;
             width: 89vw;
             border-radius: 10px;
