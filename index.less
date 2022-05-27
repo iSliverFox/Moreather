@@ -412,25 +412,30 @@ body::-webkit-scrollbar {
                         padding: 1.4em;
                         display: flex;
                         flex-direction: column;
-                        span{
-                            font-weight: bold;
-                            // font-size: 14px;
-                            // background-color: #FFD02C;
+                        overflow: hidden;
+                        .today{
+                           font-weight: bold;
                         }
                         .infoContent{
+                            overflow: hidden;
                             display: flex;
                             justify-content: space-between;
                             // background-color: #485876;
-                            height: 15vh;
+                            // height: 15vh;
                             .info1{
                                 // background-color: #526352;
                                 display: flex;
+                                align-content: flex-start;
+                                flex-direction: column;
+                                flex-wrap: wrap;
                                 align-items: center;
+                                padding:10px 0px 0px 0px;
                                 img{
-                                    height: 10vh;
+                                    height: 70px;
                                 }
                                 p{
-                                    
+                                    font-size: 22px;
+                                    font-weight: bold;
                                 }
                             }
                             .info2{
@@ -440,10 +445,10 @@ body::-webkit-scrollbar {
                                 align-items: flex-end;
                                 // background-color: #726752;
                                 .upper{
-
+                                    margin-bottom: 2px;
                                 }
                                 .down{
-
+                                    font-size: 12px;
                                 }
                             }
                         }

@@ -318,32 +318,46 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.13);
 }
 .center .WeatherForecast .container .newsContent .page .pageContent {
-  overflow: hidden;
   height: 18vh;
   padding: 1.4em;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-.center .WeatherForecast .container .newsContent .page .pageContent span {
+.center .WeatherForecast .container .newsContent .page .pageContent .today {
   font-weight: bold;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
-  height: 15vh;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 {
   display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 10px 0px 0px 0px;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 img {
-  height: 10vh;
+  height: 70px;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 p {
+  font-size: 22px;
+  font-weight: bold;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info2 .upper {
+  margin-bottom: 2px;
+}
+.center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info2 .down {
+  font-size: 12px;
 }
 .center .WeatherForecast .todayContainer {
   display: flex;
