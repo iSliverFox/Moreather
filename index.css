@@ -11,6 +11,19 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  /* 滚动槽 */
+  /* 滚动条滑块 */
+}
+body ::-webkit-scrollbar {
+  width: 1px;
+  height: 6px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+body ::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: rgba(254, 251, 251, 0.2);
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -276,11 +289,12 @@ body::-webkit-scrollbar {
 }
 .center .WeatherForecast .container .newsContent {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   width: 89vw;
   border-radius: 10px;
-  margin: 0.8em 0;
+  margin: 0.8em;
+  padding-bottom: 0.5em;
 }
 .center .WeatherForecast .container .newsContent .page {
   overflow: hidden;
@@ -296,7 +310,7 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.13);
 }
 .center .WeatherForecast .container .newsContent .page .pageContent {
-  height: 18vh;
+  height: 16vh;
   padding: 1.4em;
   display: flex;
   flex-direction: column;
@@ -385,11 +399,12 @@ body::-webkit-scrollbar {
 }
 .footer .container .newsContent {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   width: 89vw;
   border-radius: 10px;
   margin: 0.8em 0;
+  padding-bottom: 0.5em;
 }
 .footer .container .newsContent .page {
   background-size: contain;

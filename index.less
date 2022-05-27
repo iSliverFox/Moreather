@@ -12,39 +12,24 @@ body{
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+    ::-webkit-scrollbar {
+        width: 1px;
+        height: 6px;
+    }
 
-    // /* 整个滚动条背景 */
-    //     ::-webkit-scrollbar {
-    //         // width: 25px;
-    //         margin: 5px;
-    //         background-color: transparent;
-    //     }
-    
-    //     /* 滚动条上的按钮 (上下箭头). */
-    //     ::-webkit-scrollbar-button {
-    //        display: none;
-    //     }
-    
-    //     ::-webkit-scrollbar-thumb {
-    //         // width: 10px;
-    //         /* 上下两头给个圆角 */
-    //         background-color: rgba(255, 255, 255, .1);
-    //         border-radius: 10px;
-    //         /* 还可以给它加个阴影 */
-    //         // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    //     }
-    
-    //     /* 滚动条轨道 */
-    //     // ::-webkit-scrollbar-track {
-    //     //     border-radius: 20px;
-    //     //     background-color: transparent;
-    //     // }
-    
-    //     /* 当同时有垂直滚动条和水平滚动条时交汇的部分. */
-    //     ::-webkit-scrollbar-corner {
-    //         background: rgba(255, 255, 255, .1);
-    //         border-radius: 50% 50%;
-    //     }
+    /* 滚动槽 */
+    ::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 3px rgba(255, 254, 254, 0.3);
+        border-radius: 5px;
+    }
+
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background: rgba(254, 251, 251, 0.2);
+        // -webkit-box-shadow: inset 0 0 3px RGB(243, 243, 244);
+    }
+
 
 }
 
@@ -373,12 +358,12 @@ body::-webkit-scrollbar {
             .newsContent{
                 display: flex;
                 // justify-content: ;
-                overflow-x: scroll; 
+                overflow-x: auto; 
                 scroll-behavior: smooth;
                 width: 89vw;
                 border-radius: 10px;
-                margin: .8em 0;
-                // padding: 0 .8em;
+                margin: .8em;
+                padding-bottom: .5em;
                 // height: 27vh;
                 // background-color: #322b12;
                 .page{
@@ -407,7 +392,7 @@ body::-webkit-scrollbar {
                     .pageContent{
                         overflow: hidden;
                         // background-color: #ef2132;
-                        height: 18vh;
+                        height: 16vh;
                         // margin: 1em;
                         padding: 1.4em;
                         display: flex;
@@ -421,7 +406,7 @@ body::-webkit-scrollbar {
                             display: flex;
                             justify-content: space-between;
                             // background-color: #485876;
-                            // height: 15vh;
+                            // height: 150em;
                             .info1{
                                 // background-color: #526352;
                                 display: flex;
@@ -525,11 +510,12 @@ body::-webkit-scrollbar {
         //更多信息预览
         .newsContent {
             display: flex;
-            overflow-x: scroll;
+            overflow-x: auto;
             scroll-behavior: smooth;
             width: 89vw;
             border-radius: 10px;
-            margin: .8em 0;          
+            margin: .8em 0;  
+            padding-bottom: .5em;
             .page {
                 img{
                     height: 100%;
