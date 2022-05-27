@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
   border-right: 0;
   height: 2em;
   width: 18em;
-  border-radius: 25px ;
+  border-radius: 25px;
   font-size: 16px;
   color: #fff;
   outline: none;
@@ -83,6 +83,7 @@ body::-webkit-scrollbar {
 .top-nav .navContainer .top-container .search-bar button {
   height: 34px;
   cursor: pointer;
+  transform: translateX(-15px);
   border: 0;
   border-radius: 0 25px 25px 0;
   background-color: #68748A;
@@ -312,9 +313,8 @@ body::-webkit-scrollbar {
   margin-right: 0.8em;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  cursor: pointer;
 }
-.center .WeatherForecast .container .newsContent .page:nth-child(1) {
+cu .center .WeatherForecast .container .newsContent .page:nth-child(1) {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.13);
 }
