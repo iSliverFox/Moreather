@@ -174,7 +174,6 @@ body::-webkit-scrollbar {
   scroll-behavior: smooth;
   width: 89vw;
   border-radius: 10px;
-  margin: 0.8em 0;
 }
 .header .cardContainer .content .content-left {
   background-image: url("https://assets.msn.cn/weathermapdata/1/static/background/v2.0/compactads3/Cloudy 2.png");
@@ -395,13 +394,11 @@ body::-webkit-scrollbar {
   fill: #fff;
 }
 .footer .moreInformation .moreTitle {
-  margin: 0 4.2em;
-  height: 2em;
+  padding: 1.3vw 0 0 5.5vw;
   display: flex;
-  align-items: center;
+  font-weight: bold;
+  width: 88.5vw;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: center;
 }
 .footer .container {
   display: flex;
