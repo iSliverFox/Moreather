@@ -265,6 +265,13 @@ body::-webkit-scrollbar {
   background-color: transparent;
   border: none;
 }
+.header .cardContainer .content .content-right .minibtn button:nth-child(1) {
+  background-color: #FFD02C;
+  border-radius: 5px;
+}
+.header .cardContainer .content .content-right .minibtn button:nth-child(1) svg {
+  fill: #485876;
+}
 .header .cardContainer .content .content-right .minibtn button:hover {
   background-color: #FFD02C;
   border-radius: 5px;
@@ -407,14 +414,36 @@ body::-webkit-scrollbar {
   padding-bottom: 0.5em;
 }
 .footer .container .newsContent .page {
-  background-size: contain;
+  background-size: 300px 180px;
+  background-repeat: no-repeat;
   overflow: hidden;
   width: 300px;
-  height: 200px;
+  height: 180px;
   flex-shrink: 0;
   margin-right: 0.8em;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+}
+.footer .container .newsContent .page:nth-child(1) {
+  background-image: url(src/3d-new.gif);
+}
+.footer .container .newsContent .page:nth-child(2) {
+  background-image: url(src/temp-new.gif);
+}
+.footer .container .newsContent .page:nth-child(3) {
+  background-image: url(src/snow-depth-new.gif);
+}
+.footer .container .newsContent .page:nth-child(4) {
+  background-image: url(src/satellite.gif);
+}
+.footer .container .newsContent .page:nth-child(5) {
+  background-image: url(src/wind.gif);
+}
+.footer .container .newsContent .page:nth-child(6) {
+  background-image: url(src/air-small.gif);
+}
+.footer .container .newsContent .page:nth-child(7) {
+  background-image: url(src/precipitation.gif);
 }
 .footer .container .newsContent .page img {
   height: 100%;

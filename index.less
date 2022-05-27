@@ -308,7 +308,13 @@ body::-webkit-scrollbar {
                         cursor: pointer;
                         background-color: transparent;
                         border: none;
-
+                        &:nth-child(1){
+                            background-color: #FFD02C;
+                            border-radius: 5px;
+                            svg {
+                                    fill: #485876;
+                                }
+                        }
                         &:hover {
                             background-color: #FFD02C;
                             border-radius: 5px;
@@ -517,15 +523,23 @@ body::-webkit-scrollbar {
             margin: .8em 0;  
             padding-bottom: .5em;
             .page {
+                &:nth-child(1){background-image: url(./src/3d-new.gif);}
+                &:nth-child(2){background-image: url(./src/temp-new.gif);}
+                &:nth-child(3){background-image: url(./src/snow-depth-new.gif);}
+                &:nth-child(4){background-image: url(./src/satellite.gif);}
+                &:nth-child(5){background-image: url(./src/wind.gif);}
+                &:nth-child(6){background-image: url(./src/air-small.gif);}
+                &:nth-child(7){background-image: url(./src/precipitation.gif);}          
                 img{
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
                 }
-                background-size: contain;
+                background-size: 300px 180px;
+                background-repeat: no-repeat;
                 overflow: hidden;
                 width: 300px;
-                height: 200px;
+                height: 180px;
                 flex-shrink: 0;
                 margin-right: .8em;
                 background-color: rgba(255, 255, 255, .1);
