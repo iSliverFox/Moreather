@@ -382,7 +382,6 @@ body::-webkit-scrollbar {
                     margin-right:.8em;
                     background-color: rgba(255, 255, 255, .1);
                     border-radius: 10px;
-                    cu
                     &:nth-child(1){
                         width: 300px;
                         background-color: rgba(255, 255, 255, .13);
@@ -401,9 +400,9 @@ body::-webkit-scrollbar {
                     .pageContent{
                         overflow: hidden;
                         // background-color: #ef2132;
-                        height: 16vh;
+                        height: 14vh;
                         // margin: 1em;
-                        padding: 1.4em;
+                        padding: 1.2em;
                         display: flex;
                         flex-direction: column;
                         overflow: hidden;
@@ -414,6 +413,7 @@ body::-webkit-scrollbar {
                             overflow: hidden;
                             display: flex;
                             justify-content: space-between;
+                            
                             // background-color: #485876;
                             // height: 150em;
                             .info1{
@@ -424,6 +424,11 @@ body::-webkit-scrollbar {
                                 flex-wrap: wrap;
                                 align-items: center;
                                 padding:10px 0px 0px 0px;
+                                .tempature{
+                                    margin-left: 14px;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
                                 img{
                                     height: 70px;
                                 }
@@ -435,11 +440,12 @@ body::-webkit-scrollbar {
                             .info2{
                                 display: flex;
                                 flex-direction: column;
-                                justify-content: center;
+                                // justify-content: center;
                                 align-items: flex-end;
+                                // transform: translateY(-.5vh);
                                 // background-color: #726752;
                                 .upper{
-                                    margin-bottom: 2px;
+                                    margin:15px 0 5px 0;
                                 }
                                 .down{
                                     font-size: 12px;
