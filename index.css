@@ -350,7 +350,7 @@ body::-webkit-scrollbar {
   height: 70px;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info1 p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 .center .WeatherForecast .container .newsContent .page .pageContent .infoContent .info2 {
